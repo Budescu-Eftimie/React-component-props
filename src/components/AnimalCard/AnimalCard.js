@@ -1,4 +1,5 @@
 import "./AnimalCard.css";
+import PropTypes from "prop-types";
 
 export default function AnimalCard({
     additional,
@@ -20,3 +21,15 @@ export default function AnimalCard({
         </div>
     );
 }
+
+AnimalCard.propTypes = {
+    additional: PropTypes.shape({
+        link: PropTypes.string,
+        notes: PropTypes.string,
+    }),
+    diet: PropTypes.arrayOf(PropTypes.string).isRequired,
+    name: PropTypes.string.isRequired,
+    scientificName: PropTypes.string.isRequired,
+    showAdditional: PropTypes.func.isRequired,
+    size: PropTypes.number.isRequired,
+};
