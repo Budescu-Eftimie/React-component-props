@@ -33,3 +33,9 @@ AnimalCard.propTypes = {
     showAdditional: PropTypes.func.isRequired,
     size: PropTypes.number.isRequired,
 };
+
+AnimalCard.defaultProps = {
+    additional: {
+        notes: "No Additional Information",
+    },
+};
